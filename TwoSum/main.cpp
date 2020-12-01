@@ -1,10 +1,13 @@
-//
-// Created by eugen on 10.07.20.
-//
+#include <iostream>
+#include <limits>
+#include <vector>
 
-#include "Execute_TwoSum.h"
+#include "Solution_TwoSum.h"
 
-void Execute_TwoSum(){
+int main() {
+    std::cout << "Execution of Two Sum" << std::endl;
+    std::cout << "---------------------------------------" << std::endl;
+    
     std::vector<int> myVec{};
     myVec.push_back(5);
     myVec.push_back(2);
@@ -36,4 +39,7 @@ void Execute_TwoSum(){
         std::cout << elem << " ";
     }
     std::cout << std::endl;
+
+    std::cout << "=======================================" << std::endl;
+    return 0;
 }
