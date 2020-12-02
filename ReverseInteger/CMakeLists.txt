@@ -1,3 +1,2 @@
-add_executable(ReverseInteger main.cpp)
 add_executable(ReverseIntegerTest test.cpp)
 target_link_libraries(ReverseIntegerTest gtest_main)

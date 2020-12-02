@@ -2,14 +2,14 @@
 // Created by eugen on 10.07.20.
 //
 
-#ifndef LEETCODE_SOLUTION_TWOSUM_H
-#define LEETCODE_SOLUTION_TWOSUM_H
+#ifndef TWOSUM_H
+#define TWOSUM_H
 
 #include <iostream>
 #include <vector>
 
-class Solution_TwoSum {
-public:
+class TwoSum {
+   public:
     std::vector<int> twoSum(std::vector<int> &nums, int target) {
         std::vector<int> retVal{};
         for (auto outer = nums.begin(); outer != nums.end(); ++outer) {
@@ -25,5 +25,4 @@ public:
     }
 };
 
-
-#endif //LEETCODE_SOLUTION_TWOSUM_H
+#endif  // TWOSUM_H

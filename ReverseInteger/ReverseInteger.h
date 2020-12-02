@@ -2,14 +2,15 @@
 // Created by eugen on 12.07.20.
 //
 
-#ifndef LEETCODE_SOLUTION_REVERSEINTEGER_H
-#define LEETCODE_SOLUTION_REVERSEINTEGER_H
+#ifndef REVERSEINTEGER_H
+#define REVERSEINTEGER_H
 
 #include <math.h>
+
 #include <vector>
 
-class Solution_ReverseInteger {
-public:
+class ReverseInteger {
+   public:
     int reverse(int x) {
         std::vector<int> reverse_integer_vector{};
         while (x != 0) {
@@ -28,12 +29,14 @@ public:
             int delta = elem * pow(10, place_value--);
 
             if (elem < 0) {
-                if (reverse_integer < (std::numeric_limits<int>::min() - delta)) {
+                if (reverse_integer <
+                    (std::numeric_limits<int>::min() - delta)) {
                     reverse_integer = 0;
                     break;
                 }
             } else {
-                if (reverse_integer > (std::numeric_limits<int>::max() - delta)) {
+                if (reverse_integer >
+                    (std::numeric_limits<int>::max() - delta)) {
                     reverse_integer = 0;
                     break;
                 }
@@ -45,5 +48,4 @@ public:
     }
 };
 
-
-#endif//LEETCODE_SOLUTION_REVERSEINTEGER_H
+#endif  // REVERSEINTEGER_H
