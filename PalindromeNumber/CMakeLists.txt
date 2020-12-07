@@ -1,0 +1,2 @@
+add_executable(PalindromeNumberTest test.cpp)
+target_link_libraries(PalindromeNumberTest gtest_main)

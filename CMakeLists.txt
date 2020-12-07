@@ -30,3 +30,4 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
 add_executable(main main.cpp)
 add_subdirectory(ReverseInteger)
 add_subdirectory(TwoSum)
+add_subdirectory(PalindromeNumber)

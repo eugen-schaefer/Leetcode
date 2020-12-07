@@ -1,5 +1,5 @@
 # Leetcode
-Here you will find possible solutions for some problems from [LeetCode](https://leetcode.com/problemset/all/)
+Here you will find possible solutions for some problems from [LeetCode](https://leetcode.com/problemset/all/).
 The project is structured that way such that one directory on the project's top-level contains the
 following files regarding the corresponding problem from leetcode.com:
  * Description of the problem in pdf format

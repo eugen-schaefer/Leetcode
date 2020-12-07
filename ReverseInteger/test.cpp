@@ -1,4 +1,3 @@
-
 #include "ReverseInteger.h"
 #include "gtest/gtest.h"
 
