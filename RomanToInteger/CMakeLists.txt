@@ -1,0 +1,2 @@
+add_executable(RomanToIntegerTest test.cpp)
+target_link_libraries(RomanToIntegerTest gtest_main)
