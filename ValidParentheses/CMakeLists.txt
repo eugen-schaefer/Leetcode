@@ -1,0 +1,2 @@
+add_executable(ValidParenthesesTest test.cpp)
+target_link_libraries(ValidParenthesesTest gtest_main)
