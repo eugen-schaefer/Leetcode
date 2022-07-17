@@ -5,8 +5,8 @@
 #ifndef REVERSEINTEGER_H
 #define REVERSEINTEGER_H
 
+#include <limits>
 #include <math.h>
-
 #include <vector>
 
 class ReverseInteger {

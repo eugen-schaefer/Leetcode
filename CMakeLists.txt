@@ -1,31 +1,19 @@
-cmake_minimum_required(VERSION 3.16)
+# Setup according to https://google.github.io/googletest/quickstart-cmake.html#set-up-a-project
 
-set(CMAKE_CXX_STANDARD 17)
-
+cmake_minimum_required(VERSION 3.14)
 project(Leetcode)
 
-# Download and unpack googletest at configure time
-# (see https://github.com/google/googletest/blob/master/googletest/README.md#incorporating-into-an-existing-cmake-project)
-configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
+# GoogleTest requires at least C++11
+set(CMAKE_CXX_STANDARD 11)
 
-execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
-  RESULT_VARIABLE result
-  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/googletest-download )
-if(result)
-  message(FATAL_ERROR "CMake step for googletest failed: ${result}")
-endif()
-
-execute_process(COMMAND ${CMAKE_COMMAND} --build .
-  RESULT_VARIABLE result
-  WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/googletest-download )
-if(result)
-  message(FATAL_ERROR "Build step for googletest failed: ${result}")
-endif()
-
-# Add googletest directly to our build. This defines the gtest and gtest_main targets.
-add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
-                 ${CMAKE_CURRENT_BINARY_DIR}/googletest-build
-                 EXCLUDE_FROM_ALL)
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  URL https://github.com/google/googletest/archive/609281088cfefc76f9d0ce82e1ff6c30cc3591e5.zip
+)
+# For Windows: Prevent overriding the parent project's compiler/linker settings
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+FetchContent_MakeAvailable(googletest)
 
 add_executable(main main.cpp)
 add_subdirectory(ReverseInteger)
@@ -33,4 +21,3 @@ add_subdirectory(TwoSum)
 add_subdirectory(PalindromeNumber)
 add_subdirectory(RomanToInteger)
 add_subdirectory(LongestCommonPrefix)
-add_subdirectory(ValidParentheses)

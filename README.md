@@ -17,5 +17,5 @@ following files regarding the corresponding problem from leetcode.com:
 ### Basic build instructions for Linux
 1. Clone the entire repo using HTTPS: ```git clone https://github.com/eugen-schaefer/Leetcode.git```
 2. Make a build directory at the top level of the cloned repo and change into it: `mkdir build && cd build`
-3. Compile: `make .. && make`
+3. Compile: `cmake .. && make`
 4. Run the test for the solution of interest from the build folder: `./<target name>/<target name>Test` whereas the target name is the name of the problem from https://leetcode.com/problemset/all/. E.g. if you like to run the test for the solution for the problem posted [here](https://leetcode.com/problems/reverse-integer/), execute `./ReverseInteger/ReverseIntegerTest` from the build directory.
